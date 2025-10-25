@@ -1,0 +1,21 @@
+{
+  "name": "deployment",
+  "version": "1.0.0",
+  "description": "In the folder, i will be learning on how to deploy a code in production softwares. Tech used- Express.js and js",
+  "keywords": [
+    "node",
+    "deploy",
+    "backend"
+  ],
+  "license": "ISC",
+  "author": "Mann Gwal",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
+}
