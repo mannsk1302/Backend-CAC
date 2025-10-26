@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add deployment setup with `package.json` and dependencies. Included `package-lock.json` file and IntelliJ workspace configuration.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Deployment/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Deployment/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,21 +23,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "mannsk1302"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mannsk1302&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/mannsk1302/Backend-CAC.git",
-    "accountId": "130f0ebe-c139-4a3e-8c45-f1940a22fc89"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mannsk1302/Backend-CAC.git&quot;,
+    &quot;accountId&quot;: &quot;130f0ebe-c139-4a3e-8c45-f1940a22fc89&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="34YPnIUAME4ViBY2dPnk7Prfr6G" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -48,6 +49,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
@@ -73,7 +75,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761387697891</updated>
-      <workItem from="1761387699435" duration="3600000" />
+      <workItem from="1761387699435" duration="3637000" />
+      <workItem from="1761500527066" duration="932000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -83,7 +86,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761390213927</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add deployment setup with `package.json` and dependencies. Included `package-lock.json` file and IntelliJ workspace configuration.">
+      <option name="closed" value="true" />
+      <created>1761391379925</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761391379925</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,6 +102,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files." />
+    <MESSAGE value="Add `/github` route to serve static GitHub user data as JSON" />
+    <MESSAGE value="Add deployment setup with `package.json` and dependencies. Included `package-lock.json` file and IntelliJ workspace configuration." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add deployment setup with `package.json` and dependencies. Included `package-lock.json` file and IntelliJ workspace configuration." />
   </component>
 </project>

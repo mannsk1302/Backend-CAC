@@ -12,7 +12,7 @@ const githubData = {
   "id": 138506116,
   "node_id": "U_kgDOCEFvhA",
   "avatar_url": "https://avatars.githubusercontent.com/u/138506116?v=4",
-  "gravatar_id": "",
+  "gravatar_id": " ",
   "url": "https://api.github.com/users/mannsk1302",
   "html_url": "https://github.com/mannsk1302",
   "followers_url": "https://api.github.com/users/mannsk1302/followers",
