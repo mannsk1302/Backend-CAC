@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add deployment setup with `package.json` and dependencies. Included `package-lock.json` file and IntelliJ workspace configuration.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deployment/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Deployment/app.js" afterDir="false" />
-    </list>
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Revision" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761387697891</updated>
       <workItem from="1761387699435" duration="3637000" />
-      <workItem from="1761500527066" duration="932000" />
+      <workItem from="1761500527066" duration="1536000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -94,7 +91,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761391379925</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Revision">
+      <option name="closed" value="true" />
+      <created>1761502088963</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761502088963</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +109,7 @@
     <MESSAGE value="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files." />
     <MESSAGE value="Add `/github` route to serve static GitHub user data as JSON" />
     <MESSAGE value="Add deployment setup with `package.json` and dependencies. Included `package-lock.json` file and IntelliJ workspace configuration." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add deployment setup with `package.json` and dependencies. Included `package-lock.json` file and IntelliJ workspace configuration." />
+    <MESSAGE value="Revision" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revision" />
   </component>
 </project>
