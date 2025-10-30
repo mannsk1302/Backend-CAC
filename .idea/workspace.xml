@@ -4,31 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add React logo to frontend assets and setup backend with initial dependencies.&#10;&#10;Includes adding `react.svg` to the frontend and setting up the backend with `package.json`, `package-lock.json`, and necessary dependencies (`express` and `dotenv`).">
-      <change afterPath="$PROJECT_DIR$/3_Data-Modeling/models/todos/sub_todo.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3_Data-Modeling/models/todos/todo.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3_Data-Modeling/models/todos/user.model.js" afterDir="false" />
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add Mongoose models for `User`, `Todo`, and `SubTodo`.&#10;&#10;Includes setting up schemas with validation and relationships among models, such as referencing `User` in `Todo` and `SubTodo`.">
+      <change afterPath="$PROJECT_DIR$/4_DM-2/E-Commerce/category.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4_DM-2/E-Commerce/order.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4_DM-2/E-Commerce/product.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4_DM-2/E-Commerce/user.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deployment/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/1_Deployment/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deployment/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/1_Deployment/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deployment/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/1_Deployment/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deployment/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/1_Deployment/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FnB-Connection/Backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/2_FnB-Connection/Backend/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FnB-Connection/Backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/2_FnB-Connection/Backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FnB-Connection/Backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/2_FnB-Connection/Backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FnB-Connection/Frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/2_FnB-Connection/Frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FnB-Connection/Frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/2_FnB-Connection/Frontend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FnB-Connection/Frontend/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/2_FnB-Connection/Frontend/eslint.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FnB-Connection/Frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2_FnB-Connection/Frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FnB-Connection/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/2_FnB-Connection/Frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FnB-Connection/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/2_FnB-Connection/Frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FnB-Connection/Frontend/public/vite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/2_FnB-Connection/Frontend/public/vite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FnB-Connection/Frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/2_FnB-Connection/Frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FnB-Connection/Frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/2_FnB-Connection/Frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FnB-Connection/Frontend/src/assets/react.svg" beforeDir="false" afterPath="$PROJECT_DIR$/2_FnB-Connection/Frontend/src/assets/react.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FnB-Connection/Frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/2_FnB-Connection/Frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FnB-Connection/Frontend/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/2_FnB-Connection/Frontend/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FnB-Connection/Frontend/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/2_FnB-Connection/Frontend/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,29 +47,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.26830.93" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.27397.92" />
       </set>
     </attachedChunks>
   </component>
@@ -102,7 +84,12 @@
       <workItem from="1761500527066" duration="1536000" />
       <workItem from="1761673943800" duration="197000" />
       <workItem from="1761725621802" duration="5343000" />
-      <workItem from="1761763683951" duration="2879000" />
+      <workItem from="1761763683951" duration="3029000" />
+      <workItem from="1761807387850" duration="1364000" />
+      <workItem from="1761809168773" duration="9000" />
+      <workItem from="1761809204035" duration="261000" />
+      <workItem from="1761809503626" duration="143000" />
+      <workItem from="1761809689838" duration="3107000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -144,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761731345904</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add Mongoose models for `User`, `Todo`, and `SubTodo`.&#10;&#10;Includes setting up schemas with validation and relationships among models, such as referencing `User` in `Todo` and `SubTodo`.">
+      <option name="closed" value="true" />
+      <created>1761767589650</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1761767589650</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +162,7 @@
     <MESSAGE value="Add deployment setup with `package.json` and dependencies. Included `package-lock.json` file and IntelliJ workspace configuration." />
     <MESSAGE value="Revision" />
     <MESSAGE value="Add React logo to frontend assets and setup backend with initial dependencies.&#10;&#10;Includes adding `react.svg` to the frontend and setting up the backend with `package.json`, `package-lock.json`, and necessary dependencies (`express` and `dotenv`)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add React logo to frontend assets and setup backend with initial dependencies.&#10;&#10;Includes adding `react.svg` to the frontend and setting up the backend with `package.json`, `package-lock.json`, and necessary dependencies (`express` and `dotenv`)." />
+    <MESSAGE value="Add Mongoose models for `User`, `Todo`, and `SubTodo`.&#10;&#10;Includes setting up schemas with validation and relationships among models, such as referencing `User` in `Todo` and `SubTodo`." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Mongoose models for `User`, `Todo`, and `SubTodo`.&#10;&#10;Includes setting up schemas with validation and relationships among models, such as referencing `User` in `Todo` and `SubTodo`." />
   </component>
 </project>
