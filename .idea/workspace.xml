@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add Mongoose models for `User`, `Todo`, and `SubTodo`.&#10;&#10;Includes setting up schemas with validation and relationships among models, such as referencing `User` in `Todo` and `SubTodo`.">
-      <change afterPath="$PROJECT_DIR$/4_DM-2/E-Commerce/category.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_DM-2/E-Commerce/order.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_DM-2/E-Commerce/product.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_DM-2/E-Commerce/user.model.js" afterDir="false" />
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add Mongoose models for `Product`, `Category`, `Order`, and `User`.&#10;&#10;Includes schema definitions with validation, relationships among models, and the addition of the `mongoose` dependency to `package.json`.">
+      <change afterPath="$PROJECT_DIR$/4_DM-2/Hospital-MS/doctor.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4_DM-2/Hospital-MS/hospital.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4_DM-2/Hospital-MS/medical-records.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4_DM-2/Hospital-MS/pateint.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +88,9 @@
       <workItem from="1761809168773" duration="9000" />
       <workItem from="1761809204035" duration="261000" />
       <workItem from="1761809503626" duration="143000" />
-      <workItem from="1761809689838" duration="3107000" />
+      <workItem from="1761809689838" duration="4620000" />
+      <workItem from="1761815123393" duration="303000" />
+      <workItem from="1761815464225" duration="302000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -139,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761767589650</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add Mongoose models for `Product`, `Category`, `Order`, and `User`.&#10;&#10;Includes schema definitions with validation, relationships among models, and the addition of the `mongoose` dependency to `package.json`.">
+      <option name="closed" value="true" />
+      <created>1761813734863</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1761813734863</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +172,7 @@
     <MESSAGE value="Revision" />
     <MESSAGE value="Add React logo to frontend assets and setup backend with initial dependencies.&#10;&#10;Includes adding `react.svg` to the frontend and setting up the backend with `package.json`, `package-lock.json`, and necessary dependencies (`express` and `dotenv`)." />
     <MESSAGE value="Add Mongoose models for `User`, `Todo`, and `SubTodo`.&#10;&#10;Includes setting up schemas with validation and relationships among models, such as referencing `User` in `Todo` and `SubTodo`." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Mongoose models for `User`, `Todo`, and `SubTodo`.&#10;&#10;Includes setting up schemas with validation and relationships among models, such as referencing `User` in `Todo` and `SubTodo`." />
+    <MESSAGE value="Add Mongoose models for `Product`, `Category`, `Order`, and `User`.&#10;&#10;Includes schema definitions with validation, relationships among models, and the addition of the `mongoose` dependency to `package.json`." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Mongoose models for `Product`, `Category`, `Order`, and `User`.&#10;&#10;Includes schema definitions with validation, relationships among models, and the addition of the `mongoose` dependency to `package.json`." />
   </component>
 </project>
