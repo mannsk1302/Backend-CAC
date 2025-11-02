@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add MongoDB connection setup using Mongoose.&#10;&#10;Includes a `connectDB` utility in `db/index.js` for connecting to the database with error handling, the database name in `constants.js`, and its invocation in `index.js`.">
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/utils/asyncHandler.js" afterDir="false" />
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Refactor project structure and enhance server configuration.&#10;&#10;Moved files from `5_Project-Beginning` to `5_Project-Folder`. Added middleware (CORS, JSON parsing, CookieParser) in `app.js`, and updated `index.js` to manage server startup with proper error handling.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Beginning/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Beginning/.prettierignore" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/.prettierignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Beginning/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Beginning/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Beginning/src/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Beginning/src/db/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/db/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Beginning/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +99,8 @@
       <workItem from="1761838706266" duration="1340000" />
       <workItem from="1761890248076" duration="2851000" />
       <workItem from="1761895179655" duration="6040000" />
-      <workItem from="1761996699303" duration="4036000" />
+      <workItem from="1761996699303" duration="4072000" />
+      <workItem from="1762073265668" duration="694000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -181,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761902027300</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Refactor project structure and enhance server configuration.&#10;&#10;Moved files from `5_Project-Beginning` to `5_Project-Folder`. Added middleware (CORS, JSON parsing, CookieParser) in `app.js`, and updated `index.js` to manage server startup with proper error handling.">
+      <option name="closed" value="true" />
+      <created>1762008269200</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1762008269200</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +209,7 @@
     <MESSAGE value="Add Mongoose models for `Product`, `Category`, `Order`, and `User`.&#10;&#10;Includes schema definitions with validation, relationships among models, and the addition of the `mongoose` dependency to `package.json`." />
     <MESSAGE value="Add Mongoose models for `Doctor`, `Hospital`, `Patient`, and `MedicalRecord`.&#10;&#10;Includes schema definitions with validation, relationships among models, and timestamps for auditing purposes." />
     <MESSAGE value="Add MongoDB connection setup using Mongoose.&#10;&#10;Includes a `connectDB` utility in `db/index.js` for connecting to the database with error handling, the database name in `constants.js`, and its invocation in `index.js`." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add MongoDB connection setup using Mongoose.&#10;&#10;Includes a `connectDB` utility in `db/index.js` for connecting to the database with error handling, the database name in `constants.js`, and its invocation in `index.js`." />
+    <MESSAGE value="Refactor project structure and enhance server configuration.&#10;&#10;Moved files from `5_Project-Beginning` to `5_Project-Folder`. Added middleware (CORS, JSON parsing, CookieParser) in `app.js`, and updated `index.js` to manage server startup with proper error handling." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor project structure and enhance server configuration.&#10;&#10;Moved files from `5_Project-Beginning` to `5_Project-Folder`. Added middleware (CORS, JSON parsing, CookieParser) in `app.js`, and updated `index.js` to manage server startup with proper error handling." />
   </component>
 </project>
