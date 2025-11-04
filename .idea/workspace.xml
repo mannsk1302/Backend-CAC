@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add utility classes for streamlined error and response handling.&#10;&#10;Introduced `ApiResponse` and `ApiError` classes for standardized API responses and error management. Refactored `asyncHandler` for improved error propagation in asynchronous route handlers.">
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add utility methods to `User` model for authentication&#10;&#10;Includes `isPasswordCorrect`, `generateAccessToken`, and `generateRefreshToken` methods for password verification and token generation using `bcrypt` and `jsonwebtoken`.">
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/middlewares/multer.middleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/utils/cloudinary.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/models/user.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/models/user.model.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +106,7 @@
       <workItem from="1762106751894" duration="58000" />
       <workItem from="1762194567146" duration="744000" />
       <workItem from="1762249003112" duration="4301000" />
-      <workItem from="1762279296137" duration="994000" />
+      <workItem from="1762279296137" duration="4252000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -219,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762253626717</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add utility methods to `User` model for authentication&#10;&#10;Includes `isPasswordCorrect`, `generateAccessToken`, and `generateRefreshToken` methods for password verification and token generation using `bcrypt` and `jsonwebtoken`.">
+      <option name="closed" value="true" />
+      <created>1762280465076</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1762280465076</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +257,7 @@
     <MESSAGE value="Refactor project structure and enhance server configuration.&#10;&#10;Moved files from `5_Project-Beginning` to `5_Project-Folder`. Added middleware (CORS, JSON parsing, CookieParser) in `app.js`, and updated `index.js` to manage server startup with proper error handling." />
     <MESSAGE value="Revision" />
     <MESSAGE value="Add utility classes for streamlined error and response handling.&#10;&#10;Introduced `ApiResponse` and `ApiError` classes for standardized API responses and error management. Refactored `asyncHandler` for improved error propagation in asynchronous route handlers." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add utility classes for streamlined error and response handling.&#10;&#10;Introduced `ApiResponse` and `ApiError` classes for standardized API responses and error management. Refactored `asyncHandler` for improved error propagation in asynchronous route handlers." />
+    <MESSAGE value="Add utility methods to `User` model for authentication&#10;&#10;Includes `isPasswordCorrect`, `generateAccessToken`, and `generateRefreshToken` methods for password verification and token generation using `bcrypt` and `jsonwebtoken`." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add utility methods to `User` model for authentication&#10;&#10;Includes `isPasswordCorrect`, `generateAccessToken`, and `generateRefreshToken` methods for password verification and token generation using `bcrypt` and `jsonwebtoken`." />
   </component>
 </project>
