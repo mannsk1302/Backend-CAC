@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add utility classes for streamlined error and response handling.&#10;&#10;Introduced `ApiResponse` and `ApiError` classes for standardized API responses and error management. Refactored `asyncHandler` for improved error propagation in asynchronous route handlers.">
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/models/user.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/models/video.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/models/user.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/models/user.model.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +105,7 @@
       <workItem from="1762106751894" duration="58000" />
       <workItem from="1762194567146" duration="744000" />
       <workItem from="1762249003112" duration="4301000" />
+      <workItem from="1762279296137" duration="994000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
