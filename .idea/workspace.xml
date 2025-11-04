@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Revision">
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/utils/ApiError.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/utils/ApiResponse.js" afterDir="false" />
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add utility classes for streamlined error and response handling.&#10;&#10;Introduced `ApiResponse` and `ApiError` classes for standardized API responses and error management. Refactored `asyncHandler` for improved error propagation in asynchronous route handlers.">
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/models/user.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/models/video.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/utils/asyncHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/utils/asyncHandler.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +105,7 @@
       <workItem from="1762073265668" duration="694000" />
       <workItem from="1762106751894" duration="58000" />
       <workItem from="1762194567146" duration="744000" />
-      <workItem from="1762249003112" duration="2076000" />
+      <workItem from="1762249003112" duration="4301000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -212,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762195388532</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add utility classes for streamlined error and response handling.&#10;&#10;Introduced `ApiResponse` and `ApiError` classes for standardized API responses and error management. Refactored `asyncHandler` for improved error propagation in asynchronous route handlers.">
+      <option name="closed" value="true" />
+      <created>1762253626717</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1762253626717</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +247,7 @@
     <MESSAGE value="Add MongoDB connection setup using Mongoose.&#10;&#10;Includes a `connectDB` utility in `db/index.js` for connecting to the database with error handling, the database name in `constants.js`, and its invocation in `index.js`." />
     <MESSAGE value="Refactor project structure and enhance server configuration.&#10;&#10;Moved files from `5_Project-Beginning` to `5_Project-Folder`. Added middleware (CORS, JSON parsing, CookieParser) in `app.js`, and updated `index.js` to manage server startup with proper error handling." />
     <MESSAGE value="Revision" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revision" />
+    <MESSAGE value="Add utility classes for streamlined error and response handling.&#10;&#10;Introduced `ApiResponse` and `ApiError` classes for standardized API responses and error management. Refactored `asyncHandler` for improved error propagation in asynchronous route handlers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add utility classes for streamlined error and response handling.&#10;&#10;Introduced `ApiResponse` and `ApiError` classes for standardized API responses and error management. Refactored `asyncHandler` for improved error propagation in asynchronous route handlers." />
   </component>
 </project>
