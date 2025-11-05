@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add utility methods to `User` model for authentication&#10;&#10;Includes `isPasswordCorrect`, `generateAccessToken`, and `generateRefreshToken` methods for password verification and token generation using `bcrypt` and `jsonwebtoken`.">
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/middlewares/multer.middleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/utils/cloudinary.js" afterDir="false" />
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add Cloudinary integration and middleware for handling file uploads&#10;&#10;Includes a utility for uploading files to Cloudinary and a Multer middleware for temporary storage of uploaded files.&#10;&#10;Project setup has been completed now.">
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/user.routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/utils/asyncHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/utils/asyncHandler.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +108,8 @@
       <workItem from="1762106751894" duration="58000" />
       <workItem from="1762194567146" duration="744000" />
       <workItem from="1762249003112" duration="4301000" />
-      <workItem from="1762279296137" duration="4252000" />
+      <workItem from="1762279296137" duration="4493000" />
+      <workItem from="1762365711125" duration="4055000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -228,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762280465076</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add Cloudinary integration and middleware for handling file uploads&#10;&#10;Includes a utility for uploading files to Cloudinary and a Multer middleware for temporary storage of uploaded files.&#10;&#10;Project setup has been completed now.">
+      <option name="closed" value="true" />
+      <created>1762283645897</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1762283645897</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +269,7 @@
     <MESSAGE value="Revision" />
     <MESSAGE value="Add utility classes for streamlined error and response handling.&#10;&#10;Introduced `ApiResponse` and `ApiError` classes for standardized API responses and error management. Refactored `asyncHandler` for improved error propagation in asynchronous route handlers." />
     <MESSAGE value="Add utility methods to `User` model for authentication&#10;&#10;Includes `isPasswordCorrect`, `generateAccessToken`, and `generateRefreshToken` methods for password verification and token generation using `bcrypt` and `jsonwebtoken`." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add utility methods to `User` model for authentication&#10;&#10;Includes `isPasswordCorrect`, `generateAccessToken`, and `generateRefreshToken` methods for password verification and token generation using `bcrypt` and `jsonwebtoken`." />
+    <MESSAGE value="Add Cloudinary integration and middleware for handling file uploads&#10;&#10;Includes a utility for uploading files to Cloudinary and a Multer middleware for temporary storage of uploaded files.&#10;&#10;Project setup has been completed now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Cloudinary integration and middleware for handling file uploads&#10;&#10;Includes a utility for uploading files to Cloudinary and a Multer middleware for temporary storage of uploaded files.&#10;&#10;Project setup has been completed now." />
   </component>
 </project>
