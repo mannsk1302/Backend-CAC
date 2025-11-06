@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add Cloudinary integration and middleware for handling file uploads&#10;&#10;Includes a utility for uploading files to Cloudinary and a Multer middleware for temporary storage of uploaded files.&#10;&#10;Project setup has been completed now.">
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/user.routes.js" afterDir="false" />
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add user registration route and controller&#10;&#10;Implemented `POST /api/v1/users/register` with a basic `registerUser` controller. Added route handling, imported it into `app.js`, and included proper async handling utility.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/utils/asyncHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/utils/asyncHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/middlewares/multer.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/middlewares/multer.middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/routes/user.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/user.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/utils/ApiResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/utils/ApiResponse.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,29 +46,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;24.3.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;24.3.3&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.2.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.index.js.executor": "Run",
+    "Node.js.user.controller.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "24.3.0",
+    "javascript.nodejs.core.library.typings.version": "24.3.3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.2.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MANN GWAL\WebstormProjects\Backend-CAC\5_Project-Beginning\src" />
@@ -109,7 +110,8 @@
       <workItem from="1762194567146" duration="744000" />
       <workItem from="1762249003112" duration="4301000" />
       <workItem from="1762279296137" duration="4493000" />
-      <workItem from="1762365711125" duration="4055000" />
+      <workItem from="1762365711125" duration="4108000" />
+      <workItem from="1762412251442" duration="5120000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -239,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762283645897</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add user registration route and controller&#10;&#10;Implemented `POST /api/v1/users/register` with a basic `registerUser` controller. Added route handling, imported it into `app.js`, and included proper async handling utility.">
+      <option name="closed" value="true" />
+      <created>1762370309909</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1762370309909</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +280,19 @@
     <MESSAGE value="Add utility classes for streamlined error and response handling.&#10;&#10;Introduced `ApiResponse` and `ApiError` classes for standardized API responses and error management. Refactored `asyncHandler` for improved error propagation in asynchronous route handlers." />
     <MESSAGE value="Add utility methods to `User` model for authentication&#10;&#10;Includes `isPasswordCorrect`, `generateAccessToken`, and `generateRefreshToken` methods for password verification and token generation using `bcrypt` and `jsonwebtoken`." />
     <MESSAGE value="Add Cloudinary integration and middleware for handling file uploads&#10;&#10;Includes a utility for uploading files to Cloudinary and a Multer middleware for temporary storage of uploaded files.&#10;&#10;Project setup has been completed now." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Cloudinary integration and middleware for handling file uploads&#10;&#10;Includes a utility for uploading files to Cloudinary and a Multer middleware for temporary storage of uploaded files.&#10;&#10;Project setup has been completed now." />
+    <MESSAGE value="Add user registration route and controller&#10;&#10;Implemented `POST /api/v1/users/register` with a basic `registerUser` controller. Added route handling, imported it into `app.js`, and included proper async handling utility." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add user registration route and controller&#10;&#10;Implemented `POST /api/v1/users/register` with a basic `registerUser` controller. Added route handling, imported it into `app.js`, and included proper async handling utility." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js</url>
+          <line>66</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

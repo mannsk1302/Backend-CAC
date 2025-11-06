@@ -1,4 +1,5 @@
 const multer = require('multer');
+const router = require("../routes/user.routes");
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -9,6 +10,8 @@ const storage = multer.diskStorage({
     }
 });
 
-module.exports = multer({
-    storage
+const upload = multer({
+    storage: storage
 });
+
+module.exports = { upload };
