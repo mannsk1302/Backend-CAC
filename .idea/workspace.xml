@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Refactor `registerUser` controller for improved file handling and clean-up&#10;&#10;Commented out and replaced unnecessary logs. Added logic to conditionally handle `coverImage` paths. Ensured local files are removed after Cloudinary upload.">
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/middlewares/auth.middleware.js" afterDir="false" />
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add `loginUser` and `logoutUser` controllers with JWT-based authentication&#10;&#10;Implemented `POST /api/v1/users/login` and `POST /api/v1/users/logout` for user authentication and session management. Added `verifyJWT` middleware for secure route protection and integrated token handling in cookies.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/models/user.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/models/user.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/routes/user.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/user.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +110,8 @@
       <workItem from="1762365711125" duration="4108000" />
       <workItem from="1762412251442" duration="9275000" />
       <workItem from="1762423032634" duration="5728000" />
+      <workItem from="1762428868557" duration="46000" />
+      <workItem from="1762452475179" duration="2466000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -266,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762423060931</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Add `loginUser` and `logoutUser` controllers with JWT-based authentication&#10;&#10;Implemented `POST /api/v1/users/login` and `POST /api/v1/users/logout` for user authentication and session management. Added `verifyJWT` middleware for secure route protection and integrated token handling in cookies.">
+      <option name="closed" value="true" />
+      <created>1762428900005</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1762428900005</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,14 +307,15 @@
     <MESSAGE value="Add user registration route and controller&#10;&#10;Implemented `POST /api/v1/users/register` with a basic `registerUser` controller. Added route handling, imported it into `app.js`, and included proper async handling utility." />
     <MESSAGE value="Add file upload handling for user registration&#10;&#10;Integrated Multer middleware to handle avatar and cover image uploads. Updated `POST /api/v1/users/register` to process and upload images to Cloudinary during user registration." />
     <MESSAGE value="Refactor `registerUser` controller for improved file handling and clean-up&#10;&#10;Commented out and replaced unnecessary logs. Added logic to conditionally handle `coverImage` paths. Ensured local files are removed after Cloudinary upload." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor `registerUser` controller for improved file handling and clean-up&#10;&#10;Commented out and replaced unnecessary logs. Added logic to conditionally handle `coverImage` paths. Ensured local files are removed after Cloudinary upload." />
+    <MESSAGE value="Add `loginUser` and `logoutUser` controllers with JWT-based authentication&#10;&#10;Implemented `POST /api/v1/users/login` and `POST /api/v1/users/logout` for user authentication and session management. Added `verifyJWT` middleware for secure route protection and integrated token handling in cookies." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add `loginUser` and `logoutUser` controllers with JWT-based authentication&#10;&#10;Implemented `POST /api/v1/users/login` and `POST /api/v1/users/logout` for user authentication and session management. Added `verifyJWT` middleware for secure route protection and integrated token handling in cookies." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js</url>
-          <line>86</line>
+          <line>87</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
