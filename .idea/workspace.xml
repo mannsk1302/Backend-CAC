@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add user registration route and controller&#10;&#10;Implemented `POST /api/v1/users/register` with a basic `registerUser` controller. Added route handling, imported it into `app.js`, and included proper async handling utility.">
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add file upload handling for user registration&#10;&#10;Integrated Multer middleware to handle avatar and cover image uploads. Updated `POST /api/v1/users/register` to process and upload images to Cloudinary during user registration.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/middlewares/multer.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/middlewares/multer.middleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/routes/user.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/user.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/utils/ApiResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/utils/ApiResponse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/utils/cloudinary.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/utils/cloudinary.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +109,7 @@
       <workItem from="1762249003112" duration="4301000" />
       <workItem from="1762279296137" duration="4493000" />
       <workItem from="1762365711125" duration="4108000" />
-      <workItem from="1762412251442" duration="5120000" />
+      <workItem from="1762412251442" duration="9275000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -249,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762370309909</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add file upload handling for user registration&#10;&#10;Integrated Multer middleware to handle avatar and cover image uploads. Updated `POST /api/v1/users/register` to process and upload images to Cloudinary during user registration.">
+      <option name="closed" value="true" />
+      <created>1762418799626</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1762418799626</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,14 +287,15 @@
     <MESSAGE value="Add utility methods to `User` model for authentication&#10;&#10;Includes `isPasswordCorrect`, `generateAccessToken`, and `generateRefreshToken` methods for password verification and token generation using `bcrypt` and `jsonwebtoken`." />
     <MESSAGE value="Add Cloudinary integration and middleware for handling file uploads&#10;&#10;Includes a utility for uploading files to Cloudinary and a Multer middleware for temporary storage of uploaded files.&#10;&#10;Project setup has been completed now." />
     <MESSAGE value="Add user registration route and controller&#10;&#10;Implemented `POST /api/v1/users/register` with a basic `registerUser` controller. Added route handling, imported it into `app.js`, and included proper async handling utility." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add user registration route and controller&#10;&#10;Implemented `POST /api/v1/users/register` with a basic `registerUser` controller. Added route handling, imported it into `app.js`, and included proper async handling utility." />
+    <MESSAGE value="Add file upload handling for user registration&#10;&#10;Integrated Multer middleware to handle avatar and cover image uploads. Updated `POST /api/v1/users/register` to process and upload images to Cloudinary during user registration." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add file upload handling for user registration&#10;&#10;Integrated Multer middleware to handle avatar and cover image uploads. Updated `POST /api/v1/users/register` to process and upload images to Cloudinary during user registration." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js</url>
-          <line>66</line>
+          <line>71</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
