@@ -1,7 +1,7 @@
 const asyncHandler = require('../utils/asyncHandler');
 const ApiError = require('../utils/ApiError.js');
 const User = require('../models/user.model.js');
-const uploadOnCloudinary = require('../utils/cloudinary.js');
+const {uploadOnCloudinary, deleteFromCloudinary} = require('../utils/cloudinary.js');
 const ApiResponse = require('../utils/ApiResponse.js');
 const jwt = require('jsonwebtoken');
 
@@ -18,7 +18,7 @@ const generateAccessAndRefreshToken = async(userId) => {
     }catch(error){
         throw new ApiError(500, "Something went wrong while generating access and refresh token.");
     }
-}
+};
 
 const registerUser = asyncHandler( async (req, res) => {
 
@@ -84,8 +84,7 @@ const registerUser = asyncHandler( async (req, res) => {
     }
 
     // return response
-    return res.status(201).json(
-        new ApiResponse({
+    return res.status(201).json(new ApiResponse({
             statusCode: 201,
             message: "Success",
             data: createdUser
@@ -168,7 +167,11 @@ const logoutUser = asyncHandler( async (req, res) => {
         .status(200)
         .clearCookie("accessToken", options)
         .clearCookie("refreshToken", options)
-        .json(new ApiResponse(200, "User logged out Successfully", {}));
+        .json(new ApiResponse(
+            200,
+            "User logged out Successfully",
+            {}
+        ));
 });
 
 const refreshAccessToken = asyncHandler( async (req, res) => {
@@ -243,17 +246,17 @@ const changeCurrentPassword = asyncHandler( async (req, res) => {
             200,
             "Your password has been changed successfully",
             {}
-        ))
+        ));
 });
 
 const getCurrentUser = asyncHandler( async (req, res) => {
     return res
         .status(200)
-        .json(
+        .json(new ApiResponse(
             200,
-            req.user,
             "Current user fetched successfully",
-        );
+            {user: req.user}
+        ));
 });
 
 const updateAccountDetails = asyncHandler(async (req, res) => {
@@ -282,7 +285,8 @@ const updateAccountDetails = asyncHandler(async (req, res) => {
         .status(200)
         .json(new ApiResponse(
             200,
-            "Details updated successfully"
+            "Details updated successfully",
+            { user: user }
         ));
 });
 
@@ -300,6 +304,10 @@ const updateUserAvatar = asyncHandler( async (req, res) => {
         throw new ApiError(403, "Error while uploading avatar");
     }
 
+    const currentUser = await User.findById(req.user?._id);
+
+    const oldAvatarUrl = currentUser?.avatar;
+
     const user = await User.findByIdAndUpdate(
         req.user?._id,
         {
@@ -312,12 +320,24 @@ const updateUserAvatar = asyncHandler( async (req, res) => {
         }
     ).select("-password");
 
+    if (!oldAvatarUrl){
+        try {
+            const urlParts = oldAvatarUrl.split("/");
+            const fileName = urlParts.pop();
+            const folder = urlParts.pop();
+            const publicId = `${folder}/${fileName.split(".")[0]}`;
+            await deleteFromCloudinary(folder);
+        } catch (error) {
+            console.log("Failed to delete old avatar: ", error.message);
+        }
+    }
+
     return res
         .status(200)
         .json(new ApiResponse(
             200,
             "Avatar updated successfully",
-            user
+            { user: user }
         ));
 });
 
@@ -345,9 +365,18 @@ const updateUserCoverImage = asyncHandler( async (req, res) => {
             new: true
         }
     ).select("-password");
+
+    return res
+        .status(200)
+        .json(new ApiResponse(
+            200,
+            "Cover image updated successfully",
+            { user: user }
+        ));
 });
 
-module.exports = { registerUser,
+module.exports = {
+    registerUser,
     loginUser,
     logoutUser,
     refreshAccessToken,

@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add `refreshAccessToken` controller and route for token renewal&#10;&#10;Implemented `POST /api/v1/users/refresh-token` to handle access token renewal using refresh tokens. Updated user controller and routes to include the new functionality. Integrated JWT verification and secure cookie handling.">
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/models/subscription.model.js" afterDir="false" />
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add additional user management functionality and subscription model&#10;&#10;Implemented new controllers for updating user account details, changing passwords, managing avatars, and cover images. Added `getCurrentUser` endpoint. Introduced a `Subscription` Mongoose model to handle user subscriptions.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/utils/cloudinary.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/utils/cloudinary.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +36,9 @@
     &quot;accountId&quot;: &quot;130f0ebe-c139-4a3e-8c45-f1940a22fc89&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="AISelfReview" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -113,7 +116,7 @@
       <workItem from="1762423032634" duration="5728000" />
       <workItem from="1762428868557" duration="46000" />
       <workItem from="1762452475179" duration="2802000" />
-      <workItem from="1762496645148" duration="4400000" />
+      <workItem from="1762496645148" duration="10452000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -283,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762455330750</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add additional user management functionality and subscription model&#10;&#10;Implemented new controllers for updating user account details, changing passwords, managing avatars, and cover images. Added `getCurrentUser` endpoint. Introduced a `Subscription` Mongoose model to handle user subscriptions.">
+      <option name="closed" value="true" />
+      <created>1762502554235</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1762502554236</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,17 +330,7 @@
     <MESSAGE value="Refactor `registerUser` controller for improved file handling and clean-up&#10;&#10;Commented out and replaced unnecessary logs. Added logic to conditionally handle `coverImage` paths. Ensured local files are removed after Cloudinary upload." />
     <MESSAGE value="Add `loginUser` and `logoutUser` controllers with JWT-based authentication&#10;&#10;Implemented `POST /api/v1/users/login` and `POST /api/v1/users/logout` for user authentication and session management. Added `verifyJWT` middleware for secure route protection and integrated token handling in cookies." />
     <MESSAGE value="Add `refreshAccessToken` controller and route for token renewal&#10;&#10;Implemented `POST /api/v1/users/refresh-token` to handle access token renewal using refresh tokens. Updated user controller and routes to include the new functionality. Integrated JWT verification and secure cookie handling." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add `refreshAccessToken` controller and route for token renewal&#10;&#10;Implemented `POST /api/v1/users/refresh-token` to handle access token renewal using refresh tokens. Updated user controller and routes to include the new functionality. Integrated JWT verification and secure cookie handling." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js</url>
-          <line>87</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Add additional user management functionality and subscription model&#10;&#10;Implemented new controllers for updating user account details, changing passwords, managing avatars, and cover images. Added `getCurrentUser` endpoint. Introduced a `Subscription` Mongoose model to handle user subscriptions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add additional user management functionality and subscription model&#10;&#10;Implemented new controllers for updating user account details, changing passwords, managing avatars, and cover images. Added `getCurrentUser` endpoint. Introduced a `Subscription` Mongoose model to handle user subscriptions." />
   </component>
 </project>
