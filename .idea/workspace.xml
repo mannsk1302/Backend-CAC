@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add additional user management functionality and subscription model&#10;&#10;Implemented new controllers for updating user account details, changing passwords, managing avatars, and cover images. Added `getCurrentUser` endpoint. Introduced a `Subscription` Mongoose model to handle user subscriptions.">
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add avatar deletion logic and enhance Cloudinary utility&#10;&#10;Implemented `deleteFromCloudinary` utility for file deletion. Updated avatar update logic to remove old avatars from Cloudinary. Enhanced `user.controller.js` for improved API response consistency.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/utils/cloudinary.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/utils/cloudinary.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +116,7 @@
       <workItem from="1762428868557" duration="46000" />
       <workItem from="1762452475179" duration="2802000" />
       <workItem from="1762496645148" duration="10452000" />
+      <workItem from="1762511321332" duration="2502000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -294,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762502554236</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Add avatar deletion logic and enhance Cloudinary utility&#10;&#10;Implemented `deleteFromCloudinary` utility for file deletion. Updated avatar update logic to remove old avatars from Cloudinary. Enhanced `user.controller.js` for improved API response consistency.">
+      <option name="closed" value="true" />
+      <created>1762511367016</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1762511367016</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,6 +339,7 @@
     <MESSAGE value="Add `loginUser` and `logoutUser` controllers with JWT-based authentication&#10;&#10;Implemented `POST /api/v1/users/login` and `POST /api/v1/users/logout` for user authentication and session management. Added `verifyJWT` middleware for secure route protection and integrated token handling in cookies." />
     <MESSAGE value="Add `refreshAccessToken` controller and route for token renewal&#10;&#10;Implemented `POST /api/v1/users/refresh-token` to handle access token renewal using refresh tokens. Updated user controller and routes to include the new functionality. Integrated JWT verification and secure cookie handling." />
     <MESSAGE value="Add additional user management functionality and subscription model&#10;&#10;Implemented new controllers for updating user account details, changing passwords, managing avatars, and cover images. Added `getCurrentUser` endpoint. Introduced a `Subscription` Mongoose model to handle user subscriptions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add additional user management functionality and subscription model&#10;&#10;Implemented new controllers for updating user account details, changing passwords, managing avatars, and cover images. Added `getCurrentUser` endpoint. Introduced a `Subscription` Mongoose model to handle user subscriptions." />
+    <MESSAGE value="Add avatar deletion logic and enhance Cloudinary utility&#10;&#10;Implemented `deleteFromCloudinary` utility for file deletion. Updated avatar update logic to remove old avatars from Cloudinary. Enhanced `user.controller.js` for improved API response consistency." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add avatar deletion logic and enhance Cloudinary utility&#10;&#10;Implemented `deleteFromCloudinary` utility for file deletion. Updated avatar update logic to remove old avatars from Cloudinary. Enhanced `user.controller.js` for improved API response consistency." />
   </component>
 </project>
