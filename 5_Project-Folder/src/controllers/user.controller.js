@@ -270,24 +270,21 @@ const getCurrentUser = asyncHandler( async (req, res) => {
 
 const updateAccountDetails = asyncHandler(async (req, res) => {
 
-    const { fullName, avatar, coverImage, email } = req.body;
+    const updates = {};
 
-    if( !fullName || !email || !coverImage ){
-        throw new ApiError(403, "All fields are required");
+    const { fullName, email } = req.body;
+
+    if (fullName) updates.fullName = fullName;
+    if (email) updates.email = email;
+
+    if (Object.keys(updates).length === 0) {
+        throw new ApiError(400, "No fields provided for update");
     }
 
     const user = await User.findByIdAndUpdate(
         req.user?._id,
-        {
-            $set: {
-                fullName,
-                coverImage,
-                email
-            }
-        },
-        {
-            new: true
-        }
+        { $set: updates },
+        { new: true }
     ).select("-password");
 
     return res
@@ -411,6 +408,7 @@ const getUserChannelProfile = asyncHandler( async (req, res) => {
                 from: "Subscription",
                 localField: "_id",
                 foreignField: "subscribedTo",
+                as: "subscribedTo"
             }
         },
         {
@@ -494,7 +492,7 @@ const getWatchHistory = asyncHandler( async (req, res) => {
                     {
                         $addFields: {
                             owner: {
-                                $first: "owner",
+                                $first: "$owner",
                             }
                         }
                     }

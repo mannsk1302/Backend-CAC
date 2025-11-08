@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add `getWatchHistory` controller and route for fetching user watch history&#10;&#10;Implemented a new controller to retrieve user watch history with related video and owner details using aggregation pipelines. Added the corresponding route in `user.routes.js` and updated exports in `user.controller.js`.">
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Refactor `registerUser` controller and routes for improved file handling and API consistency&#10;&#10;Enhanced file path resolution with Node's `path` module for `avatar` and `coverImage`. Fixed incorrect route prefix in `app.js`. Updated Multer middleware imports in `user.routes.js`. Improved API response structure in `registerUser` controller.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/user.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/routes/user.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/user.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +119,8 @@
       <workItem from="1762511321332" duration="2502000" />
       <workItem from="1762514042584" duration="159000" />
       <workItem from="1762540198636" duration="4455000" />
-      <workItem from="1762583896195" duration="5243000" />
+      <workItem from="1762583896195" duration="8223000" />
+      <workItem from="1762617203657" duration="3270000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -323,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762544483080</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Refactor `registerUser` controller and routes for improved file handling and API consistency&#10;&#10;Enhanced file path resolution with Node's `path` module for `avatar` and `coverImage`. Fixed incorrect route prefix in `app.js`. Updated Multer middleware imports in `user.routes.js`. Improved API response structure in `registerUser` controller.">
+      <option name="closed" value="true" />
+      <created>1762589341576</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1762589341576</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,6 +370,7 @@
     <MESSAGE value="Add avatar deletion logic and enhance Cloudinary utility&#10;&#10;Implemented `deleteFromCloudinary` utility for file deletion. Updated avatar update logic to remove old avatars from Cloudinary. Enhanced `user.controller.js` for improved API response consistency." />
     <MESSAGE value="Add `getUserChannelProfile` controller for fetching user channel data&#10;&#10;Implemented a new controller to retrieve user channel profile with subscriber count, subscription details, and related metadata. Updated exports in `user.controller.js` to include the new functionality." />
     <MESSAGE value="Add `getWatchHistory` controller and route for fetching user watch history&#10;&#10;Implemented a new controller to retrieve user watch history with related video and owner details using aggregation pipelines. Added the corresponding route in `user.routes.js` and updated exports in `user.controller.js`." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add `getWatchHistory` controller and route for fetching user watch history&#10;&#10;Implemented a new controller to retrieve user watch history with related video and owner details using aggregation pipelines. Added the corresponding route in `user.routes.js` and updated exports in `user.controller.js`." />
+    <MESSAGE value="Refactor `registerUser` controller and routes for improved file handling and API consistency&#10;&#10;Enhanced file path resolution with Node's `path` module for `avatar` and `coverImage`. Fixed incorrect route prefix in `app.js`. Updated Multer middleware imports in `user.routes.js`. Improved API response structure in `registerUser` controller." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor `registerUser` controller and routes for improved file handling and API consistency&#10;&#10;Enhanced file path resolution with Node's `path` module for `avatar` and `coverImage`. Fixed incorrect route prefix in `app.js`. Updated Multer middleware imports in `user.routes.js`. Improved API response structure in `registerUser` controller." />
   </component>
 </project>
