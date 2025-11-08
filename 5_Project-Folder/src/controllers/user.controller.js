@@ -6,6 +6,8 @@ const { uploadOnCloudinary, deleteFromCloudinary } = require('../utils/cloudinar
 const ApiResponse = require('../utils/ApiResponse.js');
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
+const path = require("path");
+const fs = require("fs");
 
 const generateAccessAndRefreshToken = async(userId) => {
     try{
@@ -45,12 +47,16 @@ const registerUser = asyncHandler( async (req, res) => {
     }
 
     // check for images, check for avatar
-    const avatarLocalPath = req.files?.avatar[0]?.path;
+    const avatarLocalPath = req.files?.avatar?.[0]?.path
+        ? path.resolve(req.files.avatar[0].path)
+        : null;
+
     // const coverImageLocalPath = req.files?.coverImage[0]?.path;
 
-    let coverImageLocalPath;
-    if (req.files && Array.isArray(req.files.coverImage) && req.files.coverImage.length > 0) {
-        coverImageLocalPath = req.files.coverImage[0].path;
+    let coverImageLocalPath = null;
+
+    if (req.files?.coverImage?.[0]?.path) {
+        coverImageLocalPath = path.resolve(req.files.coverImage[0].path);
     }
 
     if(!avatarLocalPath){
@@ -86,12 +92,13 @@ const registerUser = asyncHandler( async (req, res) => {
     }
 
     // return response
-    return res.status(201).json(new ApiResponse({
-            statusCode: 201,
-            message: "Success",
-            data: createdUser
-        })
-    );
+    return res
+        .status(200)
+        .json(new ApiResponse(
+             200,
+            "User registered successfully",
+            { user: createdUser }
+        ));
 });
 
 const loginUser = asyncHandler( async (req, res) => {
