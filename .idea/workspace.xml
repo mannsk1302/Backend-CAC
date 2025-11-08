@@ -4,11 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Refactor `updateAccountDetails` controller for dynamic field updates&#10;&#10;Simplified update logic by allowing dynamic field updates and validating input fields. Improved error handling for empty update requests. Tested all the routes on Postman">
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/models/comment.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/models/like.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/models/playlist.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/models/tweet.model.js" afterDir="false" />
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add Mongoose models for tweets, playlists, likes, and comments  &#10;&#10;Implemented `Tweet`, `Playlist`, `Like`, and `Comment` models using Mongoose. Added schema validation, references for related entities, and timestamps for all models to support data consistency and future features.">
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/comment.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/dashboard.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/healthcheck.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/like.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/playlist.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/subscription.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/tweet.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/video.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/comment.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/dashboard.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/healthcheck.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/like.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/playlist.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/subscription.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/tweet.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/video.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +134,7 @@
       <workItem from="1762514042584" duration="159000" />
       <workItem from="1762540198636" duration="4455000" />
       <workItem from="1762583896195" duration="8223000" />
-      <workItem from="1762617203657" duration="5226000" />
+      <workItem from="1762617203657" duration="8322000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -340,7 +352,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762620597218</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Add Mongoose models for tweets, playlists, likes, and comments  &#10;&#10;Implemented `Tweet`, `Playlist`, `Like`, and `Comment` models using Mongoose. Added schema validation, references for related entities, and timestamps for all models to support data consistency and future features.">
+      <option name="closed" value="true" />
+      <created>1762622550684</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1762622550684</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,6 +402,7 @@
     <MESSAGE value="Add `getWatchHistory` controller and route for fetching user watch history&#10;&#10;Implemented a new controller to retrieve user watch history with related video and owner details using aggregation pipelines. Added the corresponding route in `user.routes.js` and updated exports in `user.controller.js`." />
     <MESSAGE value="Refactor `registerUser` controller and routes for improved file handling and API consistency&#10;&#10;Enhanced file path resolution with Node's `path` module for `avatar` and `coverImage`. Fixed incorrect route prefix in `app.js`. Updated Multer middleware imports in `user.routes.js`. Improved API response structure in `registerUser` controller." />
     <MESSAGE value="Refactor `updateAccountDetails` controller for dynamic field updates&#10;&#10;Simplified update logic by allowing dynamic field updates and validating input fields. Improved error handling for empty update requests. Tested all the routes on Postman" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor `updateAccountDetails` controller for dynamic field updates&#10;&#10;Simplified update logic by allowing dynamic field updates and validating input fields. Improved error handling for empty update requests. Tested all the routes on Postman" />
+    <MESSAGE value="Add Mongoose models for tweets, playlists, likes, and comments  &#10;&#10;Implemented `Tweet`, `Playlist`, `Like`, and `Comment` models using Mongoose. Added schema validation, references for related entities, and timestamps for all models to support data consistency and future features." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Mongoose models for tweets, playlists, likes, and comments  &#10;&#10;Implemented `Tweet`, `Playlist`, `Like`, and `Comment` models using Mongoose. Added schema validation, references for related entities, and timestamps for all models to support data consistency and future features." />
   </component>
 </project>
