@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add RESTful controllers and routes for application entities&#10;&#10;Implemented controllers and routes for comments, likes, playlists, subscriptions, tweets, videos, and healthcheck. Established placeholders for CRUD operations and entity-specific actions while ensuring reusable utility integration.">
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add RESTful controllers for core entities and operations&#10;&#10;Implemented functionality for comments, likes, subscriptions, videos, healthcheck, and dashboard statistics. Enhanced CRUD operations with validation, error handling, pagination, and user-specific logic.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/comment.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/comment.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/dashboard.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/dashboard.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/healthcheck.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/healthcheck.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/like.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/like.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/subscription.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/subscription.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/playlist.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/playlist.controller.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +121,7 @@
       <workItem from="1762540198636" duration="4455000" />
       <workItem from="1762583896195" duration="8223000" />
       <workItem from="1762617203657" duration="9864000" />
-      <workItem from="1762679407703" duration="4261000" />
+      <workItem from="1762679407703" duration="4864000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -359,7 +355,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762625981895</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Add RESTful controllers for core entities and operations&#10;&#10;Implemented functionality for comments, likes, subscriptions, videos, healthcheck, and dashboard statistics. Enhanced CRUD operations with validation, error handling, pagination, and user-specific logic.">
+      <option name="closed" value="true" />
+      <created>1762684899151</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1762684899151</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +381,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add `/github` route to serve static GitHub user data as JSON" />
     <MESSAGE value="Add deployment setup with `package.json` and dependencies. Included `package-lock.json` file and IntelliJ workspace configuration." />
     <MESSAGE value="Add React logo to frontend assets and setup backend with initial dependencies.&#10;&#10;Includes adding `react.svg` to the frontend and setting up the backend with `package.json`, `package-lock.json`, and necessary dependencies (`express` and `dotenv`)." />
     <MESSAGE value="Add Mongoose models for `User`, `Todo`, and `SubTodo`.&#10;&#10;Includes setting up schemas with validation and relationships among models, such as referencing `User` in `Todo` and `SubTodo`." />
@@ -402,6 +405,7 @@
     <MESSAGE value="Refactor `updateAccountDetails` controller for dynamic field updates&#10;&#10;Simplified update logic by allowing dynamic field updates and validating input fields. Improved error handling for empty update requests. Tested all the routes on Postman" />
     <MESSAGE value="Add Mongoose models for tweets, playlists, likes, and comments  &#10;&#10;Implemented `Tweet`, `Playlist`, `Like`, and `Comment` models using Mongoose. Added schema validation, references for related entities, and timestamps for all models to support data consistency and future features." />
     <MESSAGE value="Add RESTful controllers and routes for application entities&#10;&#10;Implemented controllers and routes for comments, likes, playlists, subscriptions, tweets, videos, and healthcheck. Established placeholders for CRUD operations and entity-specific actions while ensuring reusable utility integration." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add RESTful controllers and routes for application entities&#10;&#10;Implemented controllers and routes for comments, likes, playlists, subscriptions, tweets, videos, and healthcheck. Established placeholders for CRUD operations and entity-specific actions while ensuring reusable utility integration." />
+    <MESSAGE value="Add RESTful controllers for core entities and operations&#10;&#10;Implemented functionality for comments, likes, subscriptions, videos, healthcheck, and dashboard statistics. Enhanced CRUD operations with validation, error handling, pagination, and user-specific logic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add RESTful controllers for core entities and operations&#10;&#10;Implemented functionality for comments, likes, subscriptions, videos, healthcheck, and dashboard statistics. Enhanced CRUD operations with validation, error handling, pagination, and user-specific logic." />
   </component>
 </project>
