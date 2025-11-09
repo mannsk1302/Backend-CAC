@@ -20,4 +20,4 @@ const healthcheck = asyncHandler( async (req, res) => {
         ));
 });
 
-module.exports = healthcheck;
+module.exports = { healthcheck };

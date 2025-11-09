@@ -1,3 +1,3 @@
-const connectDB = "SaarChitraDB";
+const connectDB = "StreamVerse";
 
 module.exports = connectDB;

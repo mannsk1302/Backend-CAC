@@ -8,7 +8,6 @@ const verifyJWT = require("../middlewares/auth.middleware.js");
 
 const router = Router();
 
-router.route("/")
-    .get(healthcheck);
+router.route("/").get(verifyJWT, healthcheck);
 
 module.exports = router;

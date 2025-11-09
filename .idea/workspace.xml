@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add `updateTweet` and `deleteTweet` controllers&#10;&#10;Implemented `updateTweet` and `deleteTweet` controllers for managing tweets. Added input validation, error handling, and authorization checks to ensure user-specific logic.">
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add routes for comments, likes, playlists, subscriptions, tweets, videos, healthcheck, and dashboard&#10;&#10;Integrated dedicated routes for handling CRUD operations and entity-specific actions across multiple modules. Updated `app.js` to register the new routes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/routes/comment.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/comment.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/routes/dashboard.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/dashboard.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/healthcheck.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/healthcheck.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/routes/healthcheck.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/healthcheck.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/routes/like.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/like.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/routes/playlist.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/playlist.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/routes/subscription.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/subscription.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/routes/tweet.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/tweet.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/routes/video.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/video.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +123,7 @@
       <workItem from="1762540198636" duration="4455000" />
       <workItem from="1762583896195" duration="8223000" />
       <workItem from="1762617203657" duration="9864000" />
-      <workItem from="1762679407703" duration="14194000" />
+      <workItem from="1762679407703" duration="18235000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -395,7 +389,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762703460488</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Add routes for comments, likes, playlists, subscriptions, tweets, videos, healthcheck, and dashboard&#10;&#10;Integrated dedicated routes for handling CRUD operations and entity-specific actions across multiple modules. Updated `app.js` to register the new routes.">
+      <option name="closed" value="true" />
+      <created>1762708748743</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1762708748743</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +415,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add Mongoose models for `Product`, `Category`, `Order`, and `User`.&#10;&#10;Includes schema definitions with validation, relationships among models, and the addition of the `mongoose` dependency to `package.json`." />
     <MESSAGE value="Add Mongoose models for `Doctor`, `Hospital`, `Patient`, and `MedicalRecord`.&#10;&#10;Includes schema definitions with validation, relationships among models, and timestamps for auditing purposes." />
     <MESSAGE value="Add MongoDB connection setup using Mongoose.&#10;&#10;Includes a `connectDB` utility in `db/index.js` for connecting to the database with error handling, the database name in `constants.js`, and its invocation in `index.js`." />
     <MESSAGE value="Refactor project structure and enhance server configuration.&#10;&#10;Moved files from `5_Project-Beginning` to `5_Project-Folder`. Added middleware (CORS, JSON parsing, CookieParser) in `app.js`, and updated `index.js` to manage server startup with proper error handling." />
@@ -438,6 +439,7 @@
     <MESSAGE value="Add playlist controller with CRUD operations&#10;&#10;Implemented `createPlaylist`, `getUserPlaylist`, and `getPlaylistById` controllers. Added input validation, error handling, and user-specific logic for playlists. Enhanced `getPlaylistById` with data population for related entities." />
     <MESSAGE value="Add CRUD operations for playlists, tweets, and videos&#10;&#10;Implemented CRUD controllers for `playlists`, `tweets`, and `videos` with input validation, error handling, and user-specific logic. Enhanced functionality includes playlist and video updates, video publish toggling, and tweet management. Added pagination for fetching videos and integrated file handling for video uploads." />
     <MESSAGE value="Add `updateTweet` and `deleteTweet` controllers&#10;&#10;Implemented `updateTweet` and `deleteTweet` controllers for managing tweets. Added input validation, error handling, and authorization checks to ensure user-specific logic." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add `updateTweet` and `deleteTweet` controllers&#10;&#10;Implemented `updateTweet` and `deleteTweet` controllers for managing tweets. Added input validation, error handling, and authorization checks to ensure user-specific logic." />
+    <MESSAGE value="Add routes for comments, likes, playlists, subscriptions, tweets, videos, healthcheck, and dashboard&#10;&#10;Integrated dedicated routes for handling CRUD operations and entity-specific actions across multiple modules. Updated `app.js` to register the new routes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add routes for comments, likes, playlists, subscriptions, tweets, videos, healthcheck, and dashboard&#10;&#10;Integrated dedicated routes for handling CRUD operations and entity-specific actions across multiple modules. Updated `app.js` to register the new routes." />
   </component>
 </project>
