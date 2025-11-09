@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const { isValidObjectId } = mongoose;
 const Tweet = require('../models/tweet.model.js');
-const User = require('../models/user.model.js');
 const ApiResponse = require('../utils/ApiResponse.js');
 const ApiError = require('../utils/ApiError.js');
 const asyncHandler = require('../utils/asyncHandler.js');
@@ -47,9 +46,74 @@ const getUserTweets = asyncHandler(async (req, res) => {
         ));
 });
 
-const updateTweet = asyncHandler(async (req, res) => {});
+const updateTweet = asyncHandler(async (req, res) => {
+    const { tweetId } = req.params;
+    const { content } = req.body;
 
-const deleteTweet = asyncHandler(async (req, res) => {});
+    if(!tweetId){
+        throw new ApiError(400, "Tweet ID is required");
+    }
+
+    if(!isValidObjectId(tweetId)){
+        throw new ApiError(400, "Invalid Tweet ID");
+    }
+
+    if(!content || content.trim() === ""){
+        throw new ApiError(400, "Tweet content is required");
+    }
+
+    const tweet = await Tweet.findById(tweetId);
+
+    if(!tweet){
+        throw new ApiError(404, "Tweet not found");
+    }
+
+    if(tweet.owner.toString() !== req.user._id.toString()){
+        throw new ApiError(403, "You are not authorized to update this tweet");
+    }
+
+    tweet.content = content;
+    await tweet.save();
+
+    return res
+        .status(200)
+        .json(new ApiResponse(
+            200,
+            "Tweet updated successfully",
+            { tweet }
+        ));
+});
+
+const deleteTweet = asyncHandler(async (req, res) => {
+    const { tweetId } = req.params;
+
+    if(!tweetId){
+        throw new ApiError(400, "Tweet ID is required");
+    }
+
+    if(!isValidObjectId(tweetId)){
+        throw new ApiError(400, "Invalid Tweet ID");
+    }
+
+    const tweet = await Tweet.findById(tweetId);
+    if(!tweet){
+        throw new ApiError(404, "Tweet not found");
+    }
+
+    if(tweet.owner.toString() !== req.user._id.toString()){
+        throw new ApiError(403, "You are not authorized to delete this tweet");
+    }
+
+    await tweet.findByIdAndDelete(tweetId);
+
+    return res
+        .status(200)
+        .json(new ApiResponse(
+            200,
+            "Tweet deleted successfully",
+            {}
+        ));
+});
 
 module.exports = {
     createTweet,
