@@ -4,23 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add Mongoose models for tweets, playlists, likes, and comments  &#10;&#10;Implemented `Tweet`, `Playlist`, `Like`, and `Comment` models using Mongoose. Added schema validation, references for related entities, and timestamps for all models to support data consistency and future features.">
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/comment.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/dashboard.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/healthcheck.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/like.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/playlist.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/subscription.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/tweet.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/video.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/comment.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/dashboard.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/healthcheck.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/like.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/playlist.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/subscription.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/tweet.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_Project-Folder/src/routes/video.routes.js" afterDir="false" />
+    <list default="true" id="8a0d0112-7128-4522-b542-7a0557e56811" name="Changes" comment="Add RESTful controllers and routes for application entities&#10;&#10;Implemented controllers and routes for comments, likes, playlists, subscriptions, tweets, videos, and healthcheck. Established placeholders for CRUD operations and entity-specific actions while ensuring reusable utility integration.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/comment.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/comment.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/dashboard.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/dashboard.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/healthcheck.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/healthcheck.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/like.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/like.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Project-Folder/src/controllers/subscription.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/5_Project-Folder/src/controllers/subscription.controller.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +124,8 @@
       <workItem from="1762514042584" duration="159000" />
       <workItem from="1762540198636" duration="4455000" />
       <workItem from="1762583896195" duration="8223000" />
-      <workItem from="1762617203657" duration="8322000" />
+      <workItem from="1762617203657" duration="9864000" />
+      <workItem from="1762679407703" duration="4261000" />
     </task>
     <task id="LOCAL-00001" summary="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files.">
       <option name="closed" value="true" />
@@ -360,7 +351,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762622550684</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Add RESTful controllers and routes for application entities&#10;&#10;Implemented controllers and routes for comments, likes, playlists, subscriptions, tweets, videos, and healthcheck. Established placeholders for CRUD operations and entity-specific actions while ensuring reusable utility integration.">
+      <option name="closed" value="true" />
+      <created>1762625981895</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1762625981895</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +377,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial server setup with Express and dotenv integration. Added `.gitignore`, `package.json`, and IntelliJ project files." />
     <MESSAGE value="Add `/github` route to serve static GitHub user data as JSON" />
     <MESSAGE value="Add deployment setup with `package.json` and dependencies. Included `package-lock.json` file and IntelliJ workspace configuration." />
     <MESSAGE value="Add React logo to frontend assets and setup backend with initial dependencies.&#10;&#10;Includes adding `react.svg` to the frontend and setting up the backend with `package.json`, `package-lock.json`, and necessary dependencies (`express` and `dotenv`)." />
@@ -403,6 +401,7 @@
     <MESSAGE value="Refactor `registerUser` controller and routes for improved file handling and API consistency&#10;&#10;Enhanced file path resolution with Node's `path` module for `avatar` and `coverImage`. Fixed incorrect route prefix in `app.js`. Updated Multer middleware imports in `user.routes.js`. Improved API response structure in `registerUser` controller." />
     <MESSAGE value="Refactor `updateAccountDetails` controller for dynamic field updates&#10;&#10;Simplified update logic by allowing dynamic field updates and validating input fields. Improved error handling for empty update requests. Tested all the routes on Postman" />
     <MESSAGE value="Add Mongoose models for tweets, playlists, likes, and comments  &#10;&#10;Implemented `Tweet`, `Playlist`, `Like`, and `Comment` models using Mongoose. Added schema validation, references for related entities, and timestamps for all models to support data consistency and future features." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Mongoose models for tweets, playlists, likes, and comments  &#10;&#10;Implemented `Tweet`, `Playlist`, `Like`, and `Comment` models using Mongoose. Added schema validation, references for related entities, and timestamps for all models to support data consistency and future features." />
+    <MESSAGE value="Add RESTful controllers and routes for application entities&#10;&#10;Implemented controllers and routes for comments, likes, playlists, subscriptions, tweets, videos, and healthcheck. Established placeholders for CRUD operations and entity-specific actions while ensuring reusable utility integration." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add RESTful controllers and routes for application entities&#10;&#10;Implemented controllers and routes for comments, likes, playlists, subscriptions, tweets, videos, and healthcheck. Established placeholders for CRUD operations and entity-specific actions while ensuring reusable utility integration." />
   </component>
 </project>
